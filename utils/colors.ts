@@ -4,4 +4,5 @@ export const colors = {
   backgroundGreen: '#112117',
   tabBarBackground: '#182b21',
   tabBarBorder: '#22342b',
+  white: '#ffffff',
 };
