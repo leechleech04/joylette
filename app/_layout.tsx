@@ -1,10 +1,16 @@
+import { initMissionTables } from '@/db/mission.table';
 import { colors } from '@/utils/colors';
 import { Ionicons } from '@expo/vector-icons';
 import { Tabs } from 'expo-router';
+import { useEffect } from 'react';
 import { SafeAreaView } from 'react-native-safe-area-context';
 import styled from 'styled-components/native';
 
 const RootLayout = () => {
+  useEffect(() => {
+    initMissionTables();
+  }, []);
+
   return (
     <SafeAreaView style={{ flex: 1, backgroundColor: colors.backgroundGreen }}>
       <Tabs
