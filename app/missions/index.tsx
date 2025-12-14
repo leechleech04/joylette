@@ -1,7 +1,7 @@
 import { colors } from '@/utils/colors';
 import styled from 'styled-components/native';
 
-const Index = () => {
+const Missions = () => {
   return <Container></Container>;
 };
 
@@ -10,4 +10,4 @@ const Container = styled.View`
   background-color: ${colors.backgroundGreen};
 `;
 
-export default Index;
+export default Missions;
