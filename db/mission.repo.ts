@@ -10,11 +10,10 @@ export type MissionType = {
 export const MissionRepo = {
   create: async (listId: number, title: string) => {
     const db = await getDB();
-    const now = new Date().toISOString();
 
     const result = await db.runAsync(
-      `INSERT INTO missions (listId, title, updatedAt) VALUES (?, ?, ?)`,
-      [listId, title, now]
+      `INSERT INTO missions (listId, title) VALUES (?, ?)`,
+      [listId, title]
     );
 
     return result.lastInsertRowId;
@@ -39,11 +38,9 @@ export const MissionRepo = {
 
   rename: async (id: number, newTitle: string) => {
     const db = await getDB();
-    const now = new Date().toISOString();
-
     const result = await db.runAsync(
-      `UPDATE missions SET title = ?, updatedAt = ? WHERE id = ?`,
-      [newTitle, now, id]
+      `UPDATE missions SET title = ? WHERE id = ?`,
+      [newTitle, id]
     );
 
     return result.changes > 0;

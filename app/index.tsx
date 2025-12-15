@@ -1,4 +1,4 @@
-import ScreenHeader from '@/components/Screenheader';
+import ScreenHeader from '@/components/screenHeader';
 import { colors } from '@/utils/colors';
 import styled from 'styled-components/native';
 

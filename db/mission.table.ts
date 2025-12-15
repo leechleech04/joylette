@@ -15,7 +15,6 @@ export const initMissionTables = async () => {
       id INTEGER PRIMARY KEY AUTOINCREMENT,
       listId INTEGER NOT NULL,
       title TEXT NOT NULL,
-      updatedAt TEXT NOT NULL,
       FOREIGN KEY (listId)
         REFERENCES mission_lists (id)
         ON DELETE CASCADE

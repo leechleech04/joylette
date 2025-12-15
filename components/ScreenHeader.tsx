@@ -33,7 +33,7 @@ const ScreenHeader = ({
 
 const Container = styled.View`
   width: 100%;
-  padding: 8px 24px;
+  padding: 8px 16px;
   flex-direction: row;
   align-items: center;
 `;
